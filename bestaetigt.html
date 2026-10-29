@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-Mail-Adresse bestätigt – OG Summary</title>
+<meta name="robots" content="index,follow">
+<meta name="description" content="Besprechungen aufnehmen, automatisch zusammenfassen und als To-dos weiterarbeiten. Deine Inhalte bleiben auf deinem Handy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html">OG <span>Summary</span></a>
+  <nav>
+    <a href="index.html#funktionen">Funktionen</a>
+    <a href="index.html#tarife">Tarife</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="en/index.html">English</a>
+  </nav>
+</header>
+<main>
+<article class="card">
+<h1 id="title">E-Mail-Adresse bestätigt</h1>
+<p id="ok">Danke! Deine E-Mail-Adresse ist bestätigt. Öffne OG Summary und melde dich an.</p>
+<div id="err" class="msg err" hidden>Dieser Link ist abgelaufen oder wurde schon verwendet. Melde dich in der App an; falls nötig, wird dir ein neuer Link geschickt.</div>
+</article>
+<script>
+(function () {
+  var p = new URLSearchParams(location.hash.slice(1) + '&' + location.search.slice(1));
+  if (p.get('error') || p.get('error_code')) {
+    document.getElementById('ok').hidden = true; document.getElementById('err').hidden = false;
+  }
+  // Sitzungsdaten aus der Adresszeile entfernen
+  if (location.hash) history.replaceState(null, '', location.pathname);
+})();
+</script>
+</main>
+<footer>
+  <span>© 2026 OG Summary</span>
+  <span><a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a> · <a href="impressum.html">Impressum</a> · <a href="konto-loeschen.html">Konto löschen</a></span>
+</footer>
+</body>
+</html>

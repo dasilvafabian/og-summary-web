@@ -99,3 +99,13 @@ details p{color:var(--muted);margin:10px 0 0;font-size:15px}
 footer.wide{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;border-top:1px solid var(--line);padding-top:22px}
 @media (max-width:900px){.lp-hero{grid-template-columns:1fr;gap:40px;padding-top:28px}.lp-hero h1{font-size:36px}.features,.plans{grid-template-columns:1fr 1fr}.privacy-band{grid-template-columns:1fr;padding:24px}}
 @media (max-width:600px){.features,.plans,.steps{grid-template-columns:1fr}.lp-hero h1{font-size:32px}section.block h2,.closing h2{font-size:25px}.phone{width:270px}}
+.form{display:flex;flex-direction:column;gap:12px;margin-top:16px}
+.form label{font-size:14px;color:var(--muted)}
+.form input[type=password],.form input[type=text]{font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--canvas);color:var(--ink)}
+.form input:focus{outline:2px solid var(--petrol);border-color:transparent}
+.check{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--muted)}
+.btn[disabled]{opacity:.6}
+.msg{padding:12px 14px;border-radius:12px;background:var(--tint);margin-top:12px}
+.msg.err{background:#FBE9E9;color:#8A1C1C}
+@media (prefers-color-scheme:dark){.msg.err{background:#3A1E1E;color:#F2B8B8}}
+[hidden]{display:none!important}
